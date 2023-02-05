@@ -1,64 +1,38 @@
 <template>
-    <el-table class="table-striped"
-              :data="tableData">
-      <el-table-column type="index">
-    
-      </el-table-column>
-      <el-table-column prop="name"
-                       label="Name">
-      </el-table-column>
-      <el-table-column prop="job"
-                       label="Job Position">
-      </el-table-column>
-      <el-table-column prop="salary"
-                       label="Salary">
-      </el-table-column>
-      <el-table-column
-        label="Active">
-        <template slot-scope="props">
-          <base-switch v-model="props.row.active" color="black"></base-switch>
-        </template>
-      </el-table-column>
+    <h1>Lunsjmeny</h1>
+    <h2>Uke 6: Mandag</h2>
+    <el-table :data="tableData" style="width: 100%">
+      <el-table-column prop="date" label="Type" width="180" />
+      <el-table-column prop="name" label="Lunsjbeskrivelse" />
     </el-table>
 </template>
-    
-<script>
-    import {Table, TableColumn} from 'element-plus'
-    export default {
-        components: {
-            [Table.name]: Table,
-            [TableColumn.name]: TableColumn
-        },
-        data() {
-            return {
-                tableData: [{
-                name: 'Andrew Mike',
-                job: 'Develop',
-                salary: '€ 99,225',
-                active: false
-                }, {
-                name: 'John Doe',
-                job: 'Design',
-                salary: '€ 89,241',
-                active: false
-                }, {
-                name: 'Alex Mike',
-                job: 'Design',
-                salary: '€ 92,144',
-                active: false
-                }, {
-                name: 'Mike Monday',
-                job: 'Marketing',
-                salary: '€ 49,990',
-                active: true
-                },
-                {
-                name: 'Paul dickens',
-                job: 'Communication',
-                salary: '€ 69,201',
-                active: true
-                }]
-            }
-        }
-    }
+  
+<script lang="ts" setup>
+  const tableData = [
+    {
+      date: 'Lunsj',
+      name: 'Kylling korma med raita,  mangochutney og nan basmatiris(melk, hvete,  cashewnøt, hvitløk)',
+    },
+    {
+      date: 'Lunsj veg',
+      name: 'Palak paneer m rita mangochutny basmatiris nan (melk, hvete,  sulfit)',
+    },
+    {
+      date: 'Dagens påsmurt',
+      name: 'Langpanne rotspelt,  med serrano,  syltarødløk,  brie og aioli. (hvete,  egg,  sennep,  sulfitt,  hvitløk,  melk)',
+    },
+    {
+      date: 'Dagens påsmurt veg',
+      name: 'Langpanne rotspelt,  med tomat,  syltarødløk,  brie og aioli. (hvete,  egg,  sennep,  sulfitt,  hvitløk,  melk)',
+    },
+    {
+      date: 'Dagens salat',
+      name: 'Bulgursalat marinert bulgur med og grønnsaksmix,  med grillet svinenakke. Syltet rødløk. (hvete,  sulfitt)',
+    },
+    {
+      date: 'Dagens salat veg',
+      name: 'Bulgursalat,  marinert bulgur og grønnsaksmix,  med feta ,  oliven og Syltet rødløk. (hvete,  melk,  sulfitt)',
+    },
+  ]
 </script>
+  
