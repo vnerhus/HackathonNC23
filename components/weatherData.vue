@@ -1,16 +1,39 @@
 <template>
-  <div>
-    <h2>Temperaturer</h2>
-    <p v-if="currentTemp !== null">
-      Dagens temperatur nå: {{ currentTemp }}°C, {{ currentWeatherType }}
-    </p>
-    <p v-else>Kunne ikke hente dagens temperatur</p>
-    <p>Værtype og temperatur for de neste 3 dagene kl 12:</p>
-    <ul>
-      <li v-for="day in nextThreeDays">
-        {{ day.date }}: {{ day.temp }}°C, {{ day.weatherType }}
-      </li>
-    </ul>
+  <div class="weather__container">
+    <span class="weather__title">Weather forecast</span>
+    <div class="weather__bar">
+      <div class="weather__current">
+        <p class="weather__day">
+          Today:
+        </p>
+        <img class="weather__icon" v-if="currentWeatherType == 'cloudy'" src="https://cdn-icons-png.flaticon.com/512/2932/2932445.png"/>
+        <img class="weather__icon" v-if="currentWeatherType == 'cloudy_night'" src="https://cdn-icons-png.flaticon.com/512/2932/2932445.png"/>
+        <img class="weather__icon" v-if="currentWeatherType == 'partlycloudy'" src="https://cdn-icons-png.flaticon.com/512/2932/2932445.png"/>
+        <img class="weather__icon" v-if="currentWeatherType == 'partlycloudy_night'" src="https://cdn-icons-png.flaticon.com/512/2932/2932445.png"/>
+        <img class="weather__icon" v-if="currentWeatherType == 'clearsky_day'" src="https://cdn-icons-png.flaticon.com/512/106/106061.png"/>
+        <img class="weather__icon" v-if="currentWeatherType == 'x'" src="https://cdn-icons-png.flaticon.com/512/2932/2932445.png"/>
+        <img class="weather__icon" v-if="currentWeatherType == 'x'" src="https://cdn-icons-png.flaticon.com/512/2932/2932445.png"/>
+        <p class="weather__temp" v-if="currentTemp !== null">
+          {{ currentTemp }}°C
+        </p>
+      </div>
+
+      <div class="divider"></div>
+
+      <div class="weather__week">
+        <div class="weather__week__block" v-for="day in nextThreeDays">
+          <span class="weather__day">{{ day.date }}:</span>
+          <span class="weather__temp">{{ day.temp }}°C</span>
+          <img class="weather__icon" v-if="currentWeatherType == 'cloudy'" src="https://cdn-icons-png.flaticon.com/512/2932/2932445.png"/>
+          <img class="weather__icon" v-if="currentWeatherType == 'cloudy_night'" src="https://cdn-icons-png.flaticon.com/512/2932/2932445.png"/>
+          <img class="weather__icon" v-if="currentWeatherType == 'partlycloudy_night'" src="https://cdn-icons-png.flaticon.com/512/2932/2932445.png"/>
+          <img class="weather__icon" v-if="currentWeatherType == 'clearsky_day'" src="https://cdn-icons-png.flaticon.com/512/106/106061.png"/>
+          <img class="weather__icon" v-if="currentWeatherType == 'clearsky_night'" src="https://cdn-icons-png.flaticon.com/512/106/106061.png"/>
+          <img class="weather__icon" v-if="currentWeatherType == 'x'" src="https://cdn-icons-png.flaticon.com/512/2932/2932445.png"/>
+          <img class="weather__icon" v-if="currentWeatherType == 'x'" src="https://cdn-icons-png.flaticon.com/512/2932/2932445.png"/>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 <script>
@@ -72,3 +95,73 @@ export default {
   }
 };
 </script>
+
+<style>
+
+.weather__current {
+  display: flex;
+  font-size: 20px;
+  align-items: center;
+  gap: 20px;
+}
+
+.weather__container {
+  padding: 40px;
+}
+
+.weather__bar {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.weather__current .weather__temp {
+  font-size: 40px
+}
+
+.weather__current .weather__icon {
+  width: 80px;
+}
+
+.weather__current .weather__day {
+  font-size: 40px;
+}
+
+.weather__day {
+
+}
+
+
+
+.weather__title{
+  font-size: 30px;
+}
+
+.weather__icon {
+  object-fit: contain;
+  width: 40px;
+}
+
+.weather__week {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+}
+
+.weather__week__block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: #e8efff;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.divider {
+  width: 2px;
+  height: 60px;
+  background-color: #141448;
+}
+
+</style>

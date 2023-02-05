@@ -1,12 +1,7 @@
 <template>
   <div class="app_container">
     <div class="static_container half_container">
-      <AfterdarkEvent :title=events.events[0].title
-                 :date=events.events[0].date
-                 :from=events.events[0].time.from
-                 :to=events.events[0].time.to
-                 :imagesrc=events.events[0].imagesrc
-      ></AfterdarkEvent>
+      <weatherData></weatherData>
     </div>
     <div class="carousel_container half_container">
       <myCarousel></myCarousel>
