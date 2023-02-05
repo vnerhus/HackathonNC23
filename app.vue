@@ -1,6 +1,10 @@
 <template>
   <div class="app_container">
     <div class="static_container half_container">
+      <div class="clock">
+        <span>18:48</span>
+        <img class="clockimg" src="https://cdn-icons-png.flaticon.com/512/2088/2088617.png">
+      </div>
       <weatherData></weatherData>
       <MyTable></MyTable>
     </div>
@@ -67,6 +71,20 @@ body {
 
 .carousel_container {
   display: flex;
+}
+
+.clock {
+  padding: 40px;
+  background-color: coral;
+  font-size: 40px;
+  align-items: center;
+  display: flex;
+  gap: 20px;
+}
+
+.clockimg {
+  width: 40px;
+  margin-bottom: 4px;
 }
 
 .half_divider {
