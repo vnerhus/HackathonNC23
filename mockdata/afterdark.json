@@ -1,0 +1,40 @@
+{
+  "events": [
+    {
+      "title": "Hackaton",
+      "date": "04.02.2022",
+      "time": {
+        "from": "11:00",
+        "to": "19:00"
+      },
+      "imagesrc": "https://glider.ai/content/uploads/sites/6/2018/10/Hachathon.jpg"
+    },
+    {
+      "title": "New year party 2023",
+      "date": "17.02.2022",
+      "time": {
+        "from": "16:30",
+        "to": "23:59"
+      },
+      "imagesrc": "https://images.travelandleisureasia.com/wp-content/uploads/sites/2/2022/12/16151552/new-year-party-in-delhi-1600x900.jpg?tr=w-1920"
+    },
+    {
+      "title": "Missing Maps workshop 2",
+      "date": "22.02.2022",
+      "time": {
+        "from": "17:00",
+        "to": "20:00"
+      },
+      "imagesrc": "https://redcrosswwa.files.wordpress.com/2018/01/mapping3.jpg"
+    },
+    {
+      "title": "Hafjell 2023",
+      "date": "03.02.2022",
+      "time": {
+        "from": "14:45",
+        "to": "15:00"
+      },
+      "imagesrc": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_KIXyEHx-dplSOox7goo3CKnLopQaBXFAiA&usqp=CAU"
+    }
+  ]
+}
