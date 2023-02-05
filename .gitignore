@@ -6,11 +6,7 @@ node_modules
 .output
 .env
 dist
-<<<<<<< HEAD
 
 .idea
 package-lock.json
 yarn.lock
-=======
-.idea
->>>>>>> 12339230ba38e89636b8837742a6296972ab6b00
