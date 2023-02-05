@@ -2,7 +2,9 @@
   <div class="app_container">
     <div class="static_container half_container">
       <weatherData></weatherData>
+      <MyTable></MyTable>
     </div>
+    <div class="half_divider"></div>
     <div class="carousel_container half_container">
       <myCarousel></myCarousel>
     </div>
@@ -36,6 +38,13 @@
   font-style: normal;
 }
 
+@font-face {
+  font-family: GeomanistRegular;
+  src: url('assets/fonts/GeomanistRegular.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   font-family: 'GeomanistBold', sans-serif;
   margin: 0
@@ -60,5 +69,9 @@ body {
   display: flex;
 }
 
+.half_divider {
+  height: 10px;
+  background-color: #141448;
+}
 
 </style>

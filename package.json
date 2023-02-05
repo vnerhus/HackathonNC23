@@ -9,13 +9,14 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.20.13",
+    "@element-plus/nuxt": "^1.0.3",
     "@nuxt/image": "^0.7.1",
     "@nuxtjs/google-fonts": "^2.0.0",
     "nuxt": "^3.1.2"
   },
   "dependencies": {
     "@nuxt/image-edge": "^1.0.0-27919678.2f5b64b",
-    "vue3-carousel": "^0.2.9",
-    "@nuxtjs/axios": "^5.13.6"
+    "@nuxtjs/axios": "^5.13.6",
+    "vue3-carousel": "^0.2.9"
   }
 }
