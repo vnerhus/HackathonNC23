@@ -51,6 +51,7 @@ export default {
     height: 400px;
     width: 100%;
     object-fit: cover;
+    border-radius: 8px;
   }
 
   .event__date {
